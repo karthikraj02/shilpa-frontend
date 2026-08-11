@@ -4,12 +4,13 @@ import axios from 'axios'
 import App from './App.jsx'
 import './index.css'
 
+import { DEFAULT_API_BASE_URL } from './config/apiDefaults.js';
+
 const getApiBaseUrl = () => {
   if (import.meta.env.VITE_API_BASE_URL) {
     return import.meta.env.VITE_API_BASE_URL.replace(/\/$/, '')
   }
-  // Dev: Vite proxies /api to the backend. Prod: same-origin /api via Vercel rewrite.
-  return ''
+  return DEFAULT_API_BASE_URL;
 }
 
 axios.defaults.baseURL = getApiBaseUrl()
