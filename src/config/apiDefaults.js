@@ -1,1 +1,1 @@
-export const DEFAULT_API_BASE_URL = 'http://localhost:5005'
+export const DEFAULT_API_BASE_URL = 'https://shilpa-backend.vercel.app'
